@@ -1,6 +1,5 @@
 package id.ac.ui.cs.mobileprogramming.salsahava.journ.entity;
 
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
@@ -21,14 +20,10 @@ public class Story {
 
     private String description;
 
-    @ColumnInfo(name = "trip_id")
-    private int tripId;
-
-    public Story(String title, Date date, String description, int tripId) {
+    public Story(String title, Date date, String description) {
         this.title = title;
         this.date = date;
         this.description = description;
-        this.tripId = tripId;
     }
 
     public void setId(int id) {
@@ -49,9 +44,5 @@ public class Story {
 
     public String getDescription() {
         return description;
-    }
-
-    public int getTripId() {
-        return tripId;
     }
 }

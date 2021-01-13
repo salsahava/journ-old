@@ -24,22 +24,14 @@ public class Trip {
     @ColumnInfo(name = "end_date")
     private Date endDate;
 
-    @ColumnInfo(name = "story_ids")
-    private List<Integer> storyIds;
-
-    public Trip(String name, Date startDate, Date endDate, List<Integer> storyIds) {
+    public Trip(String name, Date startDate, Date endDate) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.storyIds = storyIds;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void setStoryIds(List<Integer> storyIds) {
-        this.storyIds = storyIds;
     }
 
     public int getId() {
@@ -56,9 +48,5 @@ public class Trip {
 
     public Date getEndDate() {
         return endDate;
-    }
-
-    public List<Integer> getStoryIds() {
-        return storyIds;
     }
 }

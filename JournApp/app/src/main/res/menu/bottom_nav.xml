@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_baseline_work_24"
-        android:title="@string/title_trips"
-        />
-    <item
         android:id="@+id/navigation_stories"
         android:icon="@drawable/ic_baseline_menu_book_24"
         android:title="@string/title_stories"
         />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_work_24"
+        android:title="@string/title_trips"
+        />
+
     <item
         android:id="@+id/navigation_todos"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"

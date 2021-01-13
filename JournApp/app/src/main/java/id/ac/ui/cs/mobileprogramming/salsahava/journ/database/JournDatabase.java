@@ -11,9 +11,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.StoryDao;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.ToDoDao;
@@ -78,19 +76,14 @@ public abstract class JournDatabase extends RoomDatabase {
                 e.printStackTrace();
             }
 
-            List<Integer> ids = new ArrayList<>();
-            ids.add(1);
-            ids.add(2);
-            ids.add(3);
-
-            Trip trip1 = new Trip("Paris 2021", date1, date2, ids);
-            Trip trip2 = new Trip("Madrid 2021", date2, date4, ids);
+            Trip trip1 = new Trip("Paris 2021", date1, date2);
+            Trip trip2 = new Trip("Madrid 2021", date2, date4);
 
             tripDao.insert(trip1);
             tripDao.insert(trip2);
 
-            Story story1 = new Story("Day 1 - Louvre Museum", date1, "Nice nice", 1);
-            Story story2 = new Story("Visiting Gran Via", date3, "Cool cool", 2);
+            Story story1 = new Story("Day 1 - Louvre Museum", date1, "Nice nice");
+            Story story2 = new Story("Visiting Gran Via", date3, "Cool cool");
 
             storyDao.insert(story1);
             storyDao.insert(story2);
