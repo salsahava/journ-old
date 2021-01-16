@@ -1,2 +1,2 @@
 # journ
-Tugas Tengah Semester Mata Kuliah TKTPL
+Tugas Mata Kuliah TKTPL
