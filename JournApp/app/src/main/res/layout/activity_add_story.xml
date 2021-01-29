@@ -22,12 +22,12 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:padding="12dp">
-            app:layout_constraintBottom_toTopOf="@id/submitDialogue"
+            android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@id/submitDialogue">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/titleTextView"
@@ -74,7 +74,7 @@
                     android:padding="3dp"
                     android:ems="9"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:autofillHints="@string/placeholder_date"
                     android:inputType="date"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -95,6 +95,7 @@
                     app:layout_constraintTop_toBottomOf="@id/dateInput"/>
 
                 <EditText
+                    android:id="@+id/descInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -125,11 +126,21 @@
             app:layout_constraintRight_toRightOf="parent">
 
             <Button
+                android:background="@drawable/button_background_with_border"
                 android:text="@string/back"
                 android:textColor="@color/colorPrimary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
+
+            <Button
+                android:background="@color/colorPrimary"
+                android:textColor="#FFFFFF"
+                android:text="@string/submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{(v)->AddStoryViewModel.OnClick(v)}"/>
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

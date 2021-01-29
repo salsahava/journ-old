@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.AddStoryActivity"></activity>
+        <activity android:name=".ui.StoryDetailActivity"></activity>
+        <activity android:name=".ui.AddStoryActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://727617322759196:8iNJN7QQYUQ_6dUmL4fnMHmpV2U@salsahava"
+            />
     </application>
 
 </manifest>
