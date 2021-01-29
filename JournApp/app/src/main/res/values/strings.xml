@@ -11,6 +11,9 @@
     <string name="title_stories">Stories</string>
     <string name="title_trips">Trips</string>
     <string name="title_todos">To Dos</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="trip_start_date">Start Date</string>
+    <string name="trip_end_date">End Date</string>
     <string name="back">Back</string>
     <string name="add">Add</string>
     <string name="submit">Submit</string>
@@ -20,4 +23,6 @@
     <string name="dialogue_confirmation">Are you sure?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="add_image">Add Image</string>
+    <string name="dash">-</string>
 </resources>

@@ -11,7 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,7 +19,6 @@ import java.util.Locale;
 
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.R;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Story;
-import id.ac.ui.cs.mobileprogramming.salsahava.journ.generated.callback.OnClickListener;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.util.Communicator;
 
 public class MainActivity extends AppCompatActivity implements Communicator {
@@ -59,15 +58,14 @@ public class MainActivity extends AppCompatActivity implements Communicator {
             storyDetailFragment.displayDetails(story);
         }
         else {
-            Intent intent = new Intent(this);
+            Intent intent = new Intent(this, StoryDetailActivity.class);
+            intent.putExtra("storyId", String.valueOf(story.getId()));
+            startActivity(intent);
         }
     }
 
-    public OnClickListener moveToAddStory = new OnClickListener() {
-        @Override
-        public void OnClick(View v) {
-            Intent intent = new Intent(MainActivity.this, AddStoryActivity.class);
-            startActivity(intent);
-        }
+    public OnClickListener moveToAddStory = v -> {
+        Intent intent = new Intent(MainActivity.this, AddStoryActivity.class);
+        startActivity(intent);
     };
 }

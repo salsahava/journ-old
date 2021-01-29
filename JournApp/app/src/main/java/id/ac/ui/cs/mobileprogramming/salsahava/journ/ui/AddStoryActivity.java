@@ -3,7 +3,7 @@ package id.ac.ui.cs.mobileprogramming.salsahava.journ.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -33,7 +33,7 @@ public class AddStoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addStoryViewModel = ViewModelProviders.of(this).get(AddStoryViewModel.class);
+        addStoryViewModel = new ViewModelProvider(this).get(AddStoryViewModel.class);
         addStoryBinding = DataBindingUtil.setContentView(AddStoryActivity.this, R.layout.activity_add_story);
         addStoryBinding.setLifecycleOwner(this);
         addStoryBinding.setAddStoryViewModel(addStoryViewModel);

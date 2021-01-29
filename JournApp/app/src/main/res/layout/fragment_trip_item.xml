@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/tripListLayout">
+
+    <TextView
+        android:id="@+id/tripName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/trip_name"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tripStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/trip_start_date"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tripName"/>
+
+    <TextView
+        android:id="@+id/dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dash"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tripStartDate"
+        app:layout_constraintStart_toEndOf="@id/tripStartDate"/>
+
+    <TextView
+        android:id="@+id/tripEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trip_end_date"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/dash"
+        app:layout_constraintStart_toEndOf="@id/dash"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tripEndDate"
+        app:layout_editor_absoluteX="-39dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

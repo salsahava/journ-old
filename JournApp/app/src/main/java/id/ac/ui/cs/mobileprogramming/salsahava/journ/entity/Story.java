@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import java.util.Date;
+import java.util.List;
 
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.util.Converters;
 
@@ -20,6 +21,8 @@ public class Story {
 
     private String description;
 
+    private List<Integer> commentId = null;
+
     public Story(String title, Date date, String description) {
         this.title = title;
         this.date = date;
@@ -28,6 +31,10 @@ public class Story {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setCommentId(List<Integer> commentId) {
+        this.commentId = commentId;
     }
 
     public int getId() {
@@ -44,5 +51,9 @@ public class Story {
 
     public String getDescription() {
         return description;
+    }
+
+    public List<Integer> getCommentId() {
+        return commentId;
     }
 }

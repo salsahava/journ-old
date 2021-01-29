@@ -1,5 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.salsahava.journ.ui;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
@@ -44,7 +45,7 @@ public class StoryDetailFragment extends Fragment implements Communicator {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(StoryDetailViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(StoryDetailViewModel.class);
     }
 
     @Override
