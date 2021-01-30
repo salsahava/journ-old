@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Journ</string>
+    <string name="title_main_activity">MainActivity</string>
     <string name="title_storyTitle">Title</string>
-    <string name="placeholder_title">Insert the title your story</string>
+    <string name="placeholder_title">Insert the title of your story</string>
     <string name="title_date">Date</string>
-    <string name="placeholder_date">Insert the date your story</string>
+    <string name="placeholder_date">Insert the date of your story</string>
     <string name="dummy_date">Thursday 28 January 2021</string>
     <string name="title_desc">Description</string>
     <string name="placeholder_desc">Describe your story here</string>

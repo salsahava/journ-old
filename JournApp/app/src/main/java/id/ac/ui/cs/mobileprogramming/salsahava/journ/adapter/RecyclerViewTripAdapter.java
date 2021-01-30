@@ -16,7 +16,6 @@ import java.util.List;
 
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.R;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Trip;
-import id.ac.ui.cs.mobileprogramming.salsahava.journ.util.Communicator;
 
 public class RecyclerViewTripAdapter extends RecyclerView.Adapter<RecyclerViewTripAdapter.ViewHolder> {
     private static final String TAG = RecyclerViewTripAdapter.class.getSimpleName();
@@ -40,10 +39,6 @@ public class RecyclerViewTripAdapter extends RecyclerView.Adapter<RecyclerViewTr
         holder.tripName.setText(trips.get(position).getName());
         holder.tripStartDate.setText(sdfDate.format(trips.get(position).getStartDate()));
         holder.tripEndDate.setText(sdfDate.format(trips.get(position).getEndDate()));
-        holder.tripListLayout.setOnClickListener(v -> {
-            Communicator communicator = (Communicator) context;
-            communicator.displayTripDetails(trips.get(position));
-        });
     }
 
     public void setTrips(List<Trip> tripList) {

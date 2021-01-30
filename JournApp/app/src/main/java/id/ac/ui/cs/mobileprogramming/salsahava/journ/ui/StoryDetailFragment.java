@@ -1,7 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.salsahava.journ.ui;
 
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 
