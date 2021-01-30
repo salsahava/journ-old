@@ -17,7 +17,7 @@
     <string name="trip_end_date">Tanggal Selesai</string>
     <string name="back">Kembali</string>
     <string name="add">Tambah</string>
-    <string name="submit">Submit</string>
+    <string name="submit">Simpan</string>
     <string name="title_input_error">Judul cerita tidak boleh kosong</string>
     <string name="date_input_error">Tanggal cerita tidak boleh kosong</string>
     <string name="desc_input_error">Deskripsi cerita tidak boleh kosong</string>

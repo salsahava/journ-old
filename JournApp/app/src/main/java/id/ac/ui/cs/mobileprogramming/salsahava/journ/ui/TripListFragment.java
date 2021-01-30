@@ -56,7 +56,7 @@ public class TripListFragment extends Fragment {
                     Calendar calendar = Calendar.getInstance();
                     Trip trip = trips.get(0);
                     calendar.setTime(trip.getStartDate());
-                    startAlarm(trip.getName(), "Make sure to check all your belongings before leaving! :)", calendar);
+                    startAlarm(trip.getName(), "Make sure you have everything you need for an amazing trip! :)", calendar);
                 }
             }
         });

@@ -63,6 +63,7 @@ public class RecyclerViewTripAdapter extends RecyclerView.Adapter<RecyclerViewTr
             tripName = itemView.findViewById(R.id.tripName);
             tripStartDate = itemView.findViewById(R.id.tripStartDate);
             tripEndDate = itemView.findViewById(R.id.tripEndDate);
+            tripListLayout = itemView.findViewById(R.id.tripListLayout);
         }
     }
 }
