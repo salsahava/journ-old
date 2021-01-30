@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements Communicator {
         navView = findViewById(R.id.nav_view);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_stories, R.id.navigation_route_timer_bottom)
+                R.id.navigation_home, R.id.navigation_trips, R.id.navigation_route_timer)
                 .build();
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);

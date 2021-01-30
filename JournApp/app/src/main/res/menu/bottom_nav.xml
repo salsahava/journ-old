@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_stories"
+        android:id="@+id/navigation_home"
         android:icon="@drawable/ic_baseline_menu_book_24"
         android:title="@string/title_stories"
         />
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_trips"
         android:icon="@drawable/ic_baseline_work_24"
         android:title="@string/title_trips"
         />
 
     <item
-        android:id="@+id/navigation_route_timer_bottom"
+        android:id="@+id/navigation_route_timer"
         android:icon="@drawable/ic_baseline_timer_24"
         android:title="@string/route_timer"
         />
