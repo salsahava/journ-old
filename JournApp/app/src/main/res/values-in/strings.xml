@@ -26,4 +26,11 @@
     <string name="no">Tidak</string>
     <string name="add_image">Tambahkan Gambar</string>
     <string name="dash">-</string>
+    <string name="dummy_quote">Hati-hati!</string>
+    <string name="placeholder_search">Masukkan tempat tujuanmu</string>
+    <string name="placeholder_time">Masukkan batas waktumu</string>
+    <string name="minute">Menit</string>
+    <string name="start">Mulai</string>
+    <string name="cancel">Batal</string>
+    <string name="route_timer">Timer Rute</string>
 </resources>

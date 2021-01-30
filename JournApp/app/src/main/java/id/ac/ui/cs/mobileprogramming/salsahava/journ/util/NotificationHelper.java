@@ -49,4 +49,12 @@ public class NotificationHelper extends ContextWrapper {
                 .setContentText(message)
                 .setSmallIcon(R.drawable.ic_baseline_access_time_24);
     }
+
+    public NotificationCompat.Builder getChannel2Notification() {
+        return new NotificationCompat.Builder(getApplicationContext(), channelId)
+                .setContentTitle("Countdown")
+                .setContentText("Countdown Progress")
+                .setSmallIcon(R.drawable.ic_baseline_access_time_24)
+                .setProgress(100, 100, false);
+    }
 }

@@ -17,4 +17,10 @@
         android:label="@string/title_trips"
         tools:layout="@layout/fragment_trip_list"/>
 
+    <activity
+        android:id="@+id/navigation_route_timer"
+        android:name="id.ac.ui.cs.mobileprogramming.salsahava.journ.ui.RouteTimerActivity"
+        android:label="@string/route_timer"
+        tools:layout="@layout/activity_route_timer"/>
+
 </navigation>

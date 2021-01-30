@@ -3,10 +3,21 @@
     package="id.ac.ui.cs.mobileprogramming.salsahava.journ">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +26,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".ui.RouteTimerActivity"></activity>
         <activity android:name=".ui.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,10 +49,12 @@
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/title_main_activity" />
+
         <meta-data
             android:name="CLOUDINARY_URL"
             android:value="cloudinary://727617322759196:8iNJN7QQYUQ_6dUmL4fnMHmpV2U@salsahava" />
-        <receiver android:name=".util.AlertReceiver"/>
+
+        <receiver android:name=".util.AlertReceiver" />
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Journ</string>
+    <string name="google_api_key" translatable="false">AIzaSyAMbHPaVZ0TfV1aVtjqwwtMam6VMB0_0NQ</string>
     <string name="title_main_activity">MainActivity</string>
     <string name="title_storyTitle">Title</string>
     <string name="placeholder_title">Insert the title of your story</string>
@@ -26,4 +27,11 @@
     <string name="no">No</string>
     <string name="add_image">Add Image</string>
     <string name="dash">-</string>
+    <string name="dummy_quote">Be Safe!</string>
+    <string name="placeholder_search">Insert your destination</string>
+    <string name="placeholder_time">Insert your time limit</string>
+    <string name="minute">Minute</string>
+    <string name="start">Start</string>
+    <string name="cancel">Cancel</string>
+    <string name="route_timer">Route Timer</string>
 </resources>

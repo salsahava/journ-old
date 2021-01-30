@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RouteTimerActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <TextView
+        android:id="@+id/textQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/dummy_quote"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/quote_background"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"/>
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/progressBar"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/startButton"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:background="#FFFFFF"/>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        android:layout_above="@+id/relative2"
+        android:background="@drawable/white_border">
+
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_search_24"/>
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ic_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:hint="@string/placeholder_search"
+            android:imeOptions="actionSearch"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        android:layout_above="@+id/startButton"
+        android:background="@drawable/white_border">
+
+        <ImageView
+            android:id="@+id/ic_time"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_access_time_24"/>
+
+        <EditText
+            android:id="@+id/timeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ic_time"
+            android:layout_toLeftOf="@+id/minuteText"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:hint="@string/placeholder_time"
+            android:imeOptions="actionSearch"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/minuteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minute"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ic_gps"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/textQuote"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_gps_fixed_24"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/start"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/start_button"/>
+
+</RelativeLayout>
