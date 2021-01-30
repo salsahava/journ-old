@@ -13,14 +13,18 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.CommentDao;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.StoryDao;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.ToDoDao;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.TripDao;
+import id.ac.ui.cs.mobileprogramming.salsahava.journ.dao.UserDao;
+import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Comment;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Story;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.ToDo;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Trip;
+import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.User;
 
-@Database(entities = {Trip.class, Story.class, ToDo.class}, version = 1, exportSchema = false)
+@Database(entities = {Trip.class, Story.class, ToDo.class, Comment.class, User.class}, version = 1, exportSchema = false)
 public abstract class JournDatabase extends RoomDatabase {
     private static JournDatabase instance;
     private static String DATABASE_NAME = "journ";
@@ -28,6 +32,8 @@ public abstract class JournDatabase extends RoomDatabase {
     public abstract TripDao getTripDao();
     public abstract StoryDao getStoryDao();
     public abstract ToDoDao getToDoDao();
+    public abstract CommentDao getCommentDao();
+    public abstract UserDao getUserDao();
 
     public static synchronized JournDatabase getInstance(Context context) {
         if (instance == null) {
@@ -52,11 +58,15 @@ public abstract class JournDatabase extends RoomDatabase {
         private TripDao tripDao;
         private StoryDao storyDao;
         private ToDoDao toDoDao;
+        private CommentDao commentDao;
+        private UserDao userDao;
 
         private PopulateDbAsyncTask(JournDatabase journDatabase) {
             tripDao = journDatabase.getTripDao();
             storyDao = journDatabase.getStoryDao();
             toDoDao = journDatabase.getToDoDao();
+            commentDao = journDatabase.getCommentDao();
+            userDao = journDatabase.getUserDao();
         }
 
         @Override
@@ -93,6 +103,16 @@ public abstract class JournDatabase extends RoomDatabase {
 
             toDoDao.insert(toDo1);
             toDoDao.insert(toDo2);
+
+            User user1 = new User("Salsa Hava", "Palma non sine pulvere");
+            User user2 = new User("Erwin Smith", "I wanna see what's in the basement");
+            User user3 = new User("Kageyama Tobio", "I love milk");
+            User user4 = new User("Jean Kirstein", "Springlestein best trio");
+
+            userDao.insert(user1);
+            userDao.insert(user2);
+            userDao.insert(user3);
+            userDao.insert(user4);
 
             return null;
         }

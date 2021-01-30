@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Journ</string>
+    <string name="title_main_activity">MainActivity</string>
+    <string name="title_storyTitle">Judul</string>
+    <string name="placeholder_title">Masukkan judul ceritamu</string>
+    <string name="title_date">Tanggal</string>
+    <string name="placeholder_date">Masukkan tanggal ceritamu</string>
+    <string name="dummy_date">Kamis 28 Januari 2021</string>
+    <string name="title_desc">Deskripsi</string>
+    <string name="placeholder_desc">Deskripsikan ceritamu</string>
+    <string name="dummy_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</string>
+    <string name="title_stories">Cerita</string>
+    <string name="title_trips">Perjalanan</string>
+    <string name="title_todos">To Dos</string>
+    <string name="trip_name">Nama Perjalanan</string>
+    <string name="trip_start_date">Tanggal Mulai</string>
+    <string name="trip_end_date">Tanggal Selesai</string>
+    <string name="back">Kembali</string>
+    <string name="add">Tambah</string>
+    <string name="submit">Submit</string>
+    <string name="title_input_error">Judul cerita tidak boleh kosong</string>
+    <string name="date_input_error">Tanggal cerita tidak boleh kosong</string>
+    <string name="desc_input_error">Deskripsi cerita tidak boleh kosong</string>
+    <string name="dialogue_confirmation">Apakah kamu yakin?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="add_image">Tambahkan Gambar</string>
+    <string name="dash">-</string>
+</resources>

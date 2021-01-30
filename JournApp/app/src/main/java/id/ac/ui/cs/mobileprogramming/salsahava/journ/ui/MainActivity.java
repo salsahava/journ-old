@@ -1,13 +1,17 @@
 package id.ac.ui.cs.mobileprogramming.salsahava.journ.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.View.OnClickListener;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,7 +19,6 @@ import java.util.Locale;
 
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.R;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Story;
-import id.ac.ui.cs.mobileprogramming.salsahava.journ.entity.Trip;
 import id.ac.ui.cs.mobileprogramming.salsahava.journ.util.Communicator;
 
 public class MainActivity extends AppCompatActivity implements Communicator {
@@ -41,11 +44,28 @@ public class MainActivity extends AppCompatActivity implements Communicator {
         NavigationUI.setupWithNavController(navView, navController);
 
         isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-        // TODO
+        findViewById(R.id.add_button).setOnClickListener(moveToAddStory);
     }
 
     @Override
     public void displayDetails(Story story) {
-
+        if (isLandscape && story != null) {
+            NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+            Fragment storyFragment = navHostFragment.getChildFragmentManager().getFragments().get(0);
+            StoryDetailFragment storyDetailFragment = (StoryDetailFragment) storyFragment
+                    .getChildFragmentManager()
+                    .findFragmentById(R.id.storyDetailFragment);
+            storyDetailFragment.displayDetails(story);
+        }
+        else {
+            Intent intent = new Intent(this, StoryDetailActivity.class);
+            intent.putExtra("storyId", String.valueOf(story.getId()));
+            startActivity(intent);
+        }
     }
+
+    public OnClickListener moveToAddStory = v -> {
+        Intent intent = new Intent(MainActivity.this, AddStoryActivity.class);
+        startActivity(intent);
+    };
 }

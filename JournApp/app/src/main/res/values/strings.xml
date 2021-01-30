@@ -1,14 +1,29 @@
 <resources>
     <string name="app_name">Journ</string>
+    <string name="title_main_activity">MainActivity</string>
     <string name="title_storyTitle">Title</string>
-    <string name="placeholder_title">Insert the title your story</string>
+    <string name="placeholder_title">Insert the title of your story</string>
     <string name="title_date">Date</string>
-    <string name="placeholder_date">Insert the date your story</string>
+    <string name="placeholder_date">Insert the date of your story</string>
+    <string name="dummy_date">Thursday 28 January 2021</string>
     <string name="title_desc">Description</string>
     <string name="placeholder_desc">Describe your story here</string>
+    <string name="dummy_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</string>
     <string name="title_stories">Stories</string>
     <string name="title_trips">Trips</string>
     <string name="title_todos">To Dos</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="trip_start_date">Start Date</string>
+    <string name="trip_end_date">End Date</string>
     <string name="back">Back</string>
     <string name="add">Add</string>
+    <string name="submit">Submit</string>
+    <string name="title_input_error">Story title cannot be empty</string>
+    <string name="date_input_error">Date of story cannot be empty</string>
+    <string name="desc_input_error">Story description cannot be empty</string>
+    <string name="dialogue_confirmation">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add_image">Add Image</string>
+    <string name="dash">-</string>
 </resources>
