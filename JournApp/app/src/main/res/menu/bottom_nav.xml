@@ -18,4 +18,5 @@
         android:icon="@drawable/ic_baseline_timer_24"
         android:title="@string/route_timer"
         />
+
 </menu>

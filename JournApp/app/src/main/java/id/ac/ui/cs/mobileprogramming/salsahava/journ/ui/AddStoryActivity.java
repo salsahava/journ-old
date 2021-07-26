@@ -2,7 +2,6 @@ package id.ac.ui.cs.mobileprogramming.salsahava.journ.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.app.AlertDialog;
@@ -44,11 +43,13 @@ public class AddStoryActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(story.getTitle())) {
                     addStoryBinding.titleInput.setError(getString(R.string.title_input_error));
                 }
+
                 if(story.getDate() == null) {
                     checkStringEmpty(addStoryBinding.dateInput,
                             addStoryBinding.dateInput.getText().toString(),
                             getString(R.string.date_input_error));
                 }
+
                 if(TextUtils.isEmpty(story.getDescription())) {
                     addStoryBinding.descInput.setError(getString(R.string.desc_input_error));
                 }

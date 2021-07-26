@@ -79,7 +79,6 @@ public class TripListFragment extends Fragment {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getContext(), 1, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-
     }
 
 }

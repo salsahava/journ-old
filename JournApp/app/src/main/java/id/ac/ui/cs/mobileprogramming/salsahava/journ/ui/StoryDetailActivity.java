@@ -5,7 +5,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,7 +38,6 @@ public class StoryDetailActivity extends AppCompatActivity {
     private static final String TAG = StoryDetailActivity.class.getSimpleName();
     private StoryDetailViewModel storyDetailViewModel;
     final int REQUEST_CODE_GALLERY = 999;
-    final int REQUEST_IMAGE_CAPTURE = 1;
     private Uri selectedUri;
     private Story story;
     private RecyclerView recyclerView;
@@ -71,32 +69,21 @@ public class StoryDetailActivity extends AppCompatActivity {
 
         storyDetailViewModel = new ViewModelProvider(this).get(StoryDetailViewModel.class);
 
-        storyDetailViewModel.getAllComments().observe(this, new Observer<List<Comment>>() {
-            @Override
-            public void onChanged(List<Comment> comments) {
-                commentSize = comments.size();
-            }
-        });
+        storyDetailViewModel.getAllComments().observe(this, comments -> commentSize = comments.size());
 
-        storyDetailViewModel.getStoryById(id).observe(this, new Observer<Story>() {
-            @Override
-            public void onChanged(Story story1) {
-                setView(story1);
-                story = story1;
+        storyDetailViewModel.getStoryById(id).observe(this, story1 -> {
+            setView(story1);
+            story = story1;
 
-                if (story1.getCommentId() != null) {
-                    for (Integer id : story1.getCommentId()) {
-                        storyDetailViewModel.getCommentById(String.valueOf(id))
-                                .observe(StoryDetailActivity.this, new Observer<Comment>() {
-                                    @Override
-                                    public void onChanged(Comment comment) {
-                                        if (comment != null) {
-                                            comments.add(comment);
-                                            adapter.setComments(comments);
-                                        }
-                                    }
-                                });
-                    }
+            if (story1.getCommentId() != null) {
+                for (Integer id1 : story1.getCommentId()) {
+                    storyDetailViewModel.getCommentById(String.valueOf(id1))
+                            .observe(StoryDetailActivity.this, comment -> {
+                                if (comment != null) {
+                                    comments.add(comment);
+                                    adapter.setComments(comments);
+                                }
+                            });
                 }
             }
         });
